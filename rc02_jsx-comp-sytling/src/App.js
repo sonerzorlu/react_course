@@ -1,6 +1,7 @@
 import "./index.css"
 import Header from "./Header"
 import {Footer} from "./Footer"
+import Content from "./Content"
 
 
 //* App Componenti
@@ -9,8 +10,9 @@ function App() {
     //* jsx
     <>
     <Header />
-    <Footer />
     
+    <Content/>
+    <Footer />
 
     </>
   );

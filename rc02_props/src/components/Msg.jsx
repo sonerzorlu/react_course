@@ -1,9 +1,10 @@
-const Msg = ({ name }) => {
+
+
+const Msg = ({name,img,tel}) => {
   return (
-    <div>
-      <h5>Hi, My Name is {name}</h5>
-    </div>
-  )
+
+ <div> Hi, My Name is {name}</div>
+ )
 }
 
 export default Msg

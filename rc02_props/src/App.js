@@ -1,18 +1,38 @@
 import Person from "./components/Person"
-import { data } from "./data"
+import data from "./data"
+
 
 function App() {
   return (
     <div>
-      {data.map(({ name, img, tel }) => (
-        <Person name={name} img={img} tel={tel} />
-      ))}
+      {data.map( (p) => {
+        // {data.map( ({name,img,tel}))} instead of const {name,img,tel} = p
+          const {name,img,tel} = p
+          return <Person  name= {name}img= {img}tel= {tel}/>
+      })}
+ 
     </div>
   )
 }
 
 export default App
 
+// function App() {
+//   return (
+//     <div>
+//       {data.map( (p) => (
+//             <Person 
+//             name= {p.name}
+//             img= {p.img}
+//             tel= {p.tel}
+//             />
+// ))}
+
+//     </div>
+//   )
+// }
+
+// export default App
 // <Person
 //     name="Emily Kurnikov"
 //     img="https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947__480.jpg"
