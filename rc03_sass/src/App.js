@@ -1,16 +1,16 @@
-import Card from "./components/Card"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
+import Card from './components/card/Card'
+import Button from './components/button/Button'
+import data from "./utils/data.js"
 
-import "./scss/app.scss"
-import data from "./data"
-
-function App() {
+const App = () => {
+  console.log(data);
   return (
     <>
-      <Header />
-      <Card data={data} />
-      <Footer />
+    {data.map(({name,img,tel}) => (
+      <Card name={name} img={img} tel={tel} />
+    ) )}
+    
+    <Button/>
     </>
   )
 }
