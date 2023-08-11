@@ -1,0 +1,12 @@
+@import "variables";
+.footer{
+    padding: 2rem;
+    background-color: $navyBlue;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    p{
+        font-weight: 500;
+        color: ghostwhite;
+    }
+}

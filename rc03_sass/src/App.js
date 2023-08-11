@@ -4,13 +4,13 @@ import Footer from './components/Footer'
 
 
 import "./scss/app.scss"
-
+import data from './data'
 function App () {
 
   return (
     <>
      <Header />
-     <Card />
+     <Card data ={data}/>
     <Footer />
     </>
   )
