@@ -1,8 +1,16 @@
-import React from 'react'
+import Form from "./components/1-forms/Form"
+import FormWithObject from "./components/1-forms/FormWithObject"
+import KeyboardEvents from "./components/2-keyboardClipboardEvents/KeyboardClipboard"
+import MouseEvent from "./components/3-mouseEvents/MouseEvent"
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      {/* <Form/> */}
+      {/* <KeyboardEvents/>
+      <MouseEvent /> */}
+         <FormWithObject /> 
+    </div> 
   )
 }
 
