@@ -1,26 +1,31 @@
 import React, { useState } from "react";
 
 const FormWithObject = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    address: "",
+  });
 
-  const handleUsername = (e) => {
-    setUsername(e.target.value);
-  };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
+  const { username, email, password, address } = formData;
+
+  const handleFormData = (e) => {
+    // console.log(e.target.value);
+    // console.log(e.target.id);
+    setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = (k) => {
-    console.log(k);
-    k.preventDefault();
+  const handleSubmit = (e) => {
+    console.log(e);
+    e.preventDefault();
     alert(`
         username:${username}
         email:${email}
-        password:${password}`);
+        password:${password}
+        address:${address}`);
 
-    setEmail("");
+    setFormData({ username: "", email: "", password: "", address: "" });
   };
 
   return (
@@ -36,8 +41,8 @@ const FormWithObject = () => {
             type="text"
             className="form-control"
             id="username"
-            onChange={handleUsername}
-            value={username}
+            onChange={handleFormData}
+            value={username || ""}
           />
         </div>
 
@@ -49,7 +54,7 @@ const FormWithObject = () => {
             type="email"
             className="form-control"
             id="email"
-            onChange={handleEmail}
+            onChange={handleFormData}
             value={email}
           />
         </div>
@@ -60,9 +65,21 @@ const FormWithObject = () => {
           <input
             type="password"
             className="form-control"
-            id="Password"
-            onChange={(k) => setPassword(k.target.value)}
+            id="password"
+            onChange={handleFormData}
             value={password}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="address" className="form-label">
+            Address:
+          </label>
+          <input
+            type="address"
+            className="form-control"
+            id="address"
+            onChange={handleFormData}
           />
         </div>
 
