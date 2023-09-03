@@ -7,9 +7,9 @@ const App = () => {
   return (
     <div>
       {/* <Form/> */}
-      {/* <KeyboardEvents/>
-      <MouseEvent /> */}
-         <FormWithObject /> 
+      {/* <KeyboardEvents/> */}
+      <MouseEvent />
+         {/* <FormWithObject />  */}
     </div> 
   )
 }
